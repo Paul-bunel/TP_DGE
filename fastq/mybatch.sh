@@ -1,0 +1,25 @@
+#!/bin/bash
+# mandatory
+#SBATCH --nodes=1
+# option, to use remove the first comment
+# name for the job, easier to find in squeue
+#SBATCH --job-name=fastq_download
+# filename of my program stdout and stderr
+#SBATCH --output=my_program-%j.output
+#SBATCH --error=my_program-%j.err
+# max job run time
+# #SBATCH --time=05:00:00
+# number of tasks, task per node or core to use
+# #SBATCH --ntasks=1
+# #SBATCH --ntasks-per-node=1
+# #SBATCH --threads-per-core=1
+# number of cpus to use per task
+# #SBATCH --cpus-per-task=3
+# max ram allocated to the job
+# #SBATCH --mem=15GB
+
+# script bash classique
+# Chaque commande DOIT être précédée d'un srun
+srun curl -L ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR360/007/ERR3601327/ERR3601327_2.fastq.gz -o ERR3601327_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_2.fastq.gz
+srun curl -L ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR360/005/ERR3601335/ERR3601335_1.fastq.gz -o ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_1.fastq.gz
+srun curl -L ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR360/005/ERR3601335/ERR3601335_2.fastq.gz -o ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_2.fastq.gz

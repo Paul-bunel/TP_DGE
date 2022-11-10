@@ -1,0 +1,139 @@
+STAR version=2.7.8a
+STAR compilation time,server,dir=2021-03-01T19:14:32+00:00 <place not set in Debian package>
+##### Command Line:
+/usr/lib/rna-star/bin/STAR-avx2 --genomeDir /data/indexes/STAR/GRCh38 --runThreadN 8 --readFilesCommand zcat --genomeLoad LoadAndRemove --runMode alignReads --outSAMtype BAM Unsorted --readFilesIn ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_1.fastq.gz ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_2.fastq.gz --outStd BAM_Unsorted
+##### Initial USER parameters from Command Line:
+outStd                            BAM_Unsorted
+###### All USER parameters from Command Line:
+genomeDir                     /data/indexes/STAR/GRCh38     ~RE-DEFINED
+runThreadN                    8     ~RE-DEFINED
+readFilesCommand              zcat        ~RE-DEFINED
+genomeLoad                    LoadAndRemove     ~RE-DEFINED
+runMode                       alignReads        ~RE-DEFINED
+outSAMtype                    BAM   Unsorted        ~RE-DEFINED
+readFilesIn                   ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_1.fastq.gz   ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_2.fastq.gz        ~RE-DEFINED
+outStd                        BAM_Unsorted     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           alignReads   
+runThreadN                        8
+genomeDir                         /data/indexes/STAR/GRCh38
+genomeLoad                        LoadAndRemove
+readFilesIn                       ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_1.fastq.gz   ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_2.fastq.gz   
+readFilesCommand                  zcat   
+outStd                            BAM_Unsorted
+outSAMtype                        BAM   Unsorted   
+
+-------------------------------
+##### Final effective command line:
+/usr/lib/rna-star/bin/STAR-avx2   --runMode alignReads      --runThreadN 8   --genomeDir /data/indexes/STAR/GRCh38   --genomeLoad LoadAndRemove   --readFilesIn ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_1.fastq.gz   ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_2.fastq.gz      --readFilesCommand zcat      --outStd BAM_Unsorted   --outSAMtype BAM   Unsorted   
+----------------------------------------
+
+Number of fastq files for each mate = 1
+
+   Input read files for mate 1 :
+-rwxrwxrwx 1 paul.bunel 1200 140969335 20 oct.  09:51 ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_1.fastq.gz
+
+   readsCommandsFile:
+exec > "./_STARtmp/tmp.fifo.read1"
+echo FILE 0
+zcat      "ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_1.fastq.gz"
+
+
+   Input read files for mate 2 :
+-rwxrwxrwx 1 paul.bunel 1200 138567077 20 oct.  09:52 ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_2.fastq.gz
+
+   readsCommandsFile:
+exec > "./_STARtmp/tmp.fifo.read2"
+echo FILE 0
+zcat      "ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_2.fastq.gz"
+
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+Reading genome generation parameters:
+### /usr/lib/rna-star/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 16   --genomeDir 2.7.8a/GRCh38   --genomeFastaFiles /data/genomes/human/GRCh38.fa   
+### GstrandBit=32
+versionGenome                 2.7.4a     ~RE-DEFINED
+genomeType                    Full     ~RE-DEFINED
+genomeFastaFiles              /data/genomes/human/GRCh38.fa        ~RE-DEFINED
+genomeSAindexNbases           14     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+genomeTransformType           None     ~RE-DEFINED
+genomeTransformVCF            -     ~RE-DEFINED
+sjdbOverhang                  0     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   -     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               3091202048   24235522686        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 24
+1	1	248956422	0
+2	2	242193529	249036800
+3	3	198295559	491257856
+4	4	190214555	689700864
+5	5	181538259	880017408
+6	6	170805979	1061683200
+7	7	159345973	1232601088
+8	8	145138636	1391984640
+9	9	138394717	1537212416
+10	10	133797422	1675624448
+11	11	135086622	1809580032
+12	12	133275309	1944846336
+13	13	114364328	2078277632
+14	14	107043718	2192834560
+15	15	101991189	2300051456
+16	16	90338345	2402287616
+17	17	83257441	2492727296
+18	18	80373285	2576089088
+19	19	58617616	2656567296
+20	20	64444167	2715287552
+21	21	46709983	2779774976
+22	22	50818468	2826698752
+23	X	156040895	2877554688
+24	Y	57227415	3033792512
+Started loading the genome: Mon Oct 31 16:17:41 2022
+
+Genome: size given as a parameter = 3091202048
+SA: size given as a parameter = 24235522686
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=14  nSAi=357913940
+nGenome=3091202048;  nSAbyte=24235522686
+GstrandBit=32   SA number of indices=5875278226
+Found genome in shared memory
+Using shared memory for genome. key=0x17290219;   shmid=7
+Finished loading the genome: Mon Oct 31 16:17:41 2022
+
+alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
+Created thread # 1
+Starting to map file # 0
+mate 1:   ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_1.fastq.gz
+mate 2:   ERR3601335_Illumina_HiSeq_2500_paired_end_sequencing_The_epigenetic_landscape_of_human_colorectal_cancer_2.fastq.gz
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Created thread # 6
+Created thread # 7
+Thread #6 end of input stream, nextChar=-1
+Completed: thread #1
+Completed: thread #0
+Joined thread # 1
+Completed: thread #4
+Completed: thread #7
+Completed: thread #3
+Completed: thread #6
+Completed: thread #2
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Completed: thread #5
+Joined thread # 5
+Joined thread # 6
+Joined thread # 7
+ALL DONE!
